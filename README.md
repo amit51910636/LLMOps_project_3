@@ -124,3 +124,11 @@ For example, to merge Sunny’s main branch into your main:
 git checkout main
 
 git merge upstream/main
+
+
+==========================
+"Whenever tutor push changes, run below commands to pull his code and merge in your code"
+git fetch upstream 
+git checkout main
+git merge upstream/main
+================================================================================================
