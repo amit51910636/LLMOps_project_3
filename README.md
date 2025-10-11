@@ -24,7 +24,7 @@ uv python list
 
 
 
-git remote set-url origin https://github.com/amit51910636/LLMOps_project3.git
+git remote set-url origin https://github.com/amit51910636/LLMOps_project_3.git
 git remote -v
 git push -u origin main
 
