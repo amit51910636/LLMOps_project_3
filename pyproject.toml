@@ -31,6 +31,10 @@ where = ["research_and_analyst"]
 [tool.uv.workspace]
 members = [
     ".",
+<<<<<<< HEAD
+=======
+    ".",
+>>>>>>> c940fc4cfcb460e516e31604dfa7c0625103785b
 ]
 
 [tool.uv.sources]
