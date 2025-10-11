@@ -28,3 +28,25 @@ license = { text = "Proprietary" }
 [tool.setuptools.packages.find]
 where = ["research_and_analyst"]
 
+[tool.uv.workspace]
+members = [
+    ".",
+]
+
+[tool.uv.sources]
+automated-research-report-generation = { workspace = true }
+
+[dependency-groups]
+dev = [
+    "automated-research-report-generation",
+    "langchain-community==0.3.30",
+    "langchain-core==0.3.78",
+    "langchain-google-genai==2.1.8",
+    "langchain-groq==0.3.6",
+    "langchain-openai==0.3.32",
+    "langgraph==0.6.8",
+    "structlog==25.4.0",
+    "tavily-python==0.7.12",
+    "wikipedia==1.4.0",
+]
+
