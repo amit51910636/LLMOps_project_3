@@ -1,10 +1,11 @@
 import importlib.metadata
 packages = [
-    "ragas",
-    "langchain-mcp-adapters",
-    "mcp",
-    "ddgs",
-    "langchain-openai"
+
+    "langgraph",
+    "langchain_community",
+    "langchain_core",
+    "tavily-python",
+    "wikipedia"
     ]
 for pkg in packages:
     try:
