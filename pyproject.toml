@@ -3,24 +3,32 @@ requires = ["setuptools>=68"]         # PEP 660 editable support ke liye naya se
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "ecomm-prod-assistant"
+
+
+name = "automated-research-report-generation"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 dependencies = [
-    "fastapi>=0.116.1",
-    "langchain==0.3.27",
-    # TIP: 'langchain-core' ko alag pin na karo; 'langchain' sahi version le aayega.
-    # Agar zaroori ho, to compatible pair hi pin karo.
-    "python-dotenv==1.1.1",
-    "streamlit==1.49.1",
+    "ipykernel>=6.30.1",
+    "langchain-community>=0.3.30",
+    "langchain-core>=0.3.78",
+    "langchain-google-genai==2.1.8",
+    "langchain-groq==0.3.6",
+    "langchain-openai==0.3.32",
+    "langgraph>=0.6.8",
+    "structlog==25.4.0",
+    "tavily-python>=0.7.12",
+    "wikipedia>=1.4.0",
+
 ]
 
 # Optional: authors, license
 authors = [{ name = "Sunny Savita" }]
 license = { text = "Proprietary" }
 
+<<<<<<< HEAD
 # Optional: CLI command (python -m pip install -e . ke baad yeh create hoga)
 [project.scripts]
 ecomm-assistant = "ecomm_prod_assistant.cli:main"
@@ -28,6 +36,39 @@ ecomm-assistant = "ecomm_prod_assistant.cli:main"
 [tool.setuptools.packages.find]
 where = ["prod_assistant"]
 include = ["ecomm_prod_assistant*"]
+=======
+[tool.setuptools.packages.find]
+where = ["research_and_analyst"]
+>>>>>>> upstream/main
+
+[tool.uv.workspace]
+members = [
+    ".",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    ".",
+>>>>>>> c940fc4cfcb460e516e31604dfa7c0625103785b
+>>>>>>> b63eb4d829519849ebc2aca806fe8fbc34aefad5
+]
+
+[tool.uv.sources]
+automated-research-report-generation = { workspace = true }
+
+[dependency-groups]
+dev = [
+    "automated-research-report-generation",
+    "langchain-community==0.3.30",
+    "langchain-core==0.3.78",
+    "langchain-google-genai==2.1.8",
+    "langchain-groq==0.3.6",
+    "langchain-openai==0.3.32",
+    "langgraph==0.6.8",
+    "structlog==25.4.0",
+    "tavily-python==0.7.12",
+    "wikipedia==1.4.0",
+]
 
 [tool.uv.workspace]
 members = [
